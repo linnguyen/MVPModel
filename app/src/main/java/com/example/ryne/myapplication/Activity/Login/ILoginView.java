@@ -5,4 +5,6 @@ package com.example.ryne.myapplication.Activity.Login;
  */
 
 public interface ILoginView {
+    void onSuccess();
+    void showProgressbar();
 }
