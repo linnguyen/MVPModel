@@ -36,7 +36,7 @@ public class LoginPresenter implements ILoginPresenter, ILoginModel.OnLoginFinis
 
     @Override
     public void onSuccess() {
-
+       loginView.showMessageSuccess();
     }
 
     @Override

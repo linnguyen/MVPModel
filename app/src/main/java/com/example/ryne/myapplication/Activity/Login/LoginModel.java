@@ -25,13 +25,15 @@ public class LoginModel implements ILoginModel {
                     if (isSocialLogin) {
 
                     } else {
-
+                        callLogin(email, password, context, onLoginFinishListener);
                     }
                 }
             }
         }
     }
     private void callLogin(final String email, String pwd, final  Context context, final OnLoginFinishListener onLoginFinishListener){
-
+        if (email.equals("nguyenlin@gmail.com") && pwd.equals("hochiminh")){
+            onLoginFinishListener.onSuccess();
+        }
     }
 }

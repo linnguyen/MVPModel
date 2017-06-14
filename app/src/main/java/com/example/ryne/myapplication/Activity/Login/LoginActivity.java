@@ -36,10 +36,9 @@ public class LoginActivity extends AppCompatActivity implements ILoginView, View
         Utils.hideSoftKeyBoard(this, view);
         if (Utils.isInternetOn(this)) {
             loginPresenter.validateUser(edtLoginUserName.getText().toString().trim(), edtLoginPassWord.getText().toString(),LoginActivity.this, false);
-        }else {
+        } else {
             Utils.networkErrorDialog(this);
         }
-
     }
 
     @Override
@@ -55,5 +54,10 @@ public class LoginActivity extends AppCompatActivity implements ILoginView, View
     @Override
     public void showProgressbar() {
       Utils.showProgressBar(this);
+    }
+
+    @Override
+    public void showMessageSuccess() {
+        Toast.makeText(getApplicationContext(), "Successfully Login", Toast.LENGTH_LONG).show();
     }
 }
