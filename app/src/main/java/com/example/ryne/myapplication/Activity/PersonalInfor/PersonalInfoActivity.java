@@ -10,5 +10,8 @@ public class PersonalInfoActivity {
 
     public void test(){
     }
+    public void testE(){
+
+    }
 
 }
